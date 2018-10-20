@@ -4,10 +4,6 @@ import MySQLdb
 
 app = Flask(__name__)
 
-#######################
-#   DATABASE CONFIG   #
-#######################
-
 db = MySQLdb.connect(host="localhost", user=user, passwd=password, db=dbname)
 cur = db.cursor()
 
