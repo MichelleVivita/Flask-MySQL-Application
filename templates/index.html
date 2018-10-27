@@ -13,8 +13,12 @@
                     <p>Hello <b>{{ session_user_name }}</b></p>
                 {% endif %}
                 <a href="{{ url_for('logout') }}">Logout</a>
-            </div>
-        </div>
+	    </div>
+	</div>
     </div>
+<a href="{{ url_for('residents') }}">Residents</a>
+<a href="{{ url_for('services') }}">Services</a>
+<a href="{{ url_for('calendar') }}">Events</a>
+
 </body>
 </html>
