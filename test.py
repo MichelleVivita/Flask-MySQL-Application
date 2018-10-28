@@ -35,7 +35,26 @@ def login():
         else:
             error = "Invalid Credential"
     return render_template('login.html', error=error)
+@app.route('/residents', methods=['GET', 'POST'])
+def residents():
+    query="SELECT Door_No,Block_No,R_Name,Phone,Email FROM RESIDENT"
+    cur.execute(query)
+    items = cur.fetchall()
+    return render_template('display.html',items=items)
 
+@app.route('/services')
+def services():
+    query="SELECT * from services"
+    cur.execute(query)
+    items = cur.fetchall()
+    return render_template('services.html',items=items)
+    
+@app.route('/calendar')
+def calendar():
+    query="SELECT * from calendar"
+    cur.execute(query)
+    items = cur.fetchall()
+    return render_template('calendar.html',items=items)
 
 @app.route('/logout')
 def logout():
