@@ -1,6 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Residents </title>
+<style>
+p
+{
+    font-family: verdana;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	color: maroon;
+letter-spaceing: 10px;
+	-webkit-text-fill-color: maroon;
+	opacity: 0.69;
+	
+}
+#residents {
+    font-family: verdana;
+    border-collapse: collapse;
+    width: 100%;
+}
 
+#residents td, #residents th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#residents tr:nth-child(even){background-color: ivory;}
+
+#residents tr:hover {background-color: #ddd;}
+
+#residents th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;	
+	opacity: 0.69;
+    color: ivory;
+}
+</style>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    	<script src="{{url_for('static', filename='js/jquery-3.3.1.js')}}"></script> 
+	
+</head>
+<body>
+<p> RESIDENTS </p><br>
+<table id="residents">
+ <tr>
+    <th>Door_No</th>
+    <th>Block_No</th>
+    <th>R_Name</th>
+    <th>Phone</th>
+    <th>Residency_Type</th>
+    <th>Email</th>
+  </tr> 
 {% for item in items %}
-<table>
     <tr>
         <td>{{item[0]}}</td>
 	<td>{{item[1]}}</td>
@@ -8,6 +63,11 @@
 	<td>{{item[3]}}</td>
 	<td>{{item[4]}}</td>
 	<td>{{item[5]}}</td>
-	<td>{{item[6]}}</td>
+	
     </tr>
 {% endfor %}
+</table>
+
+</body>
+</html>
+
