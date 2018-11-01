@@ -1,13 +1,95 @@
 
-{% for item in items %}
-<table>
-    <tr>
-        <td>{{item[0]}}</td>
-	<td>{{item[1]}}</td>
-	<td>{{item[2]}}</td>
-	<td>{{item[3]}}</td>
-	<td><a href="/signUp">Book Now</a></li>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> </td>
-    </tr>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Calendar </title>
+<style>
+p
+{
+    font-family: verdana;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	color: maroon;
+letter-spaceing: 10px;
+	-webkit-text-fill-color: maroon;
+	opacity: 0.69;
+	
+}
+#events {
+    font-family: verdana;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#events td, #events th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#events tr:nth-child(even){background-color: ivory;}
+
+#events tr:hover {background-color: #ddd;}
+
+#events th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;	
+	opacity: 0.69;
+    color: ivory;
+}
+.button {
+-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    background-color: ivory;
+	opacity: 0.69;
+    color: maroon;
+border: 2px solid maroon;
+    padding: 15px;
+	border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+font-weight: bold;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: maroon; /* Green */
+    color: ivory;
+}
+</style>
+<link rel="stylesheet" href="cal.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
+	
+</head>
+<body>
+<p> CALENDAR OF EVENTS </p><br>
+<table id="events">
+<tr>
+    <th>E_ID</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Event</th>
+    <th>Seats Remaining</th>
+    <th>Book Event</th>
+  </tr>
+  {% for item in items %}
+		
+		    <tr>
+        	<td>{{item[0]}}</td>
+		<td>{{item[1]}}</td>
+		<td>{{item[2]}}</td>
+		<td>{{item[3]}}</td>
+		<td>{{item[4]}}</td>
+		<td><a href="{{ url_for('booking') }}">Book</a></td>
+</tr>
 {% endfor %}
+</table>
+
+</body>
+</html>
