@@ -1,12 +1,87 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title> Services </title>
 
-{% for item in items %}
-<table>
+<link rel="stylesheet" href="cal.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
+
+</head>
+
+
+<body>
+<div>
+<form method="POST">
+  Select the In Time: <input type="text" name="intime"><br>
+  Select the Out Time: <input type="text" name="outtime"><br>
+<button id="boo" type="submit">Avail</button>
+</form>
+</div>
+
+
+<div>
+<style>
+#services {
+    font-family: verdana;
+    border-collapse: collapse;
+    width: 100%;
+
+	
+}
+
+#services td, #services th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#services tr:nth-child(even){background-color: ivory;}
+
+#services tr:hover {background-color: #ddd;}
+
+#services th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;	
+	opacity: 0.69;
+    color: ivory;
+}
+.button {
+    background-color: maroon;
+	opacity: 0.69;
+    border: none;
+    color: white;
+    padding: 15px;
+	border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+</style>
+
+<table id="services">
+<tr>
+    <th>Staff ID</th>
+    <th>Staff Name</th>
+    <th>Type Of Service</th>
+	
+  </tr>
+  {% for item in items %}
     <tr>
         <td>{{item[0]}}</td>
 	<td>{{item[1]}}</td>
 	<td>{{item[2]}}</td>
-	<td><a href="/signUp">Avail this service</a></li>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> </td>
-    </tr>
+
+	    </tr>
 {% endfor %}
+</table>
+<a href="{{ url_for('avail') }}">Book your service</a>
+</div>
+
+</body>
+</html>
