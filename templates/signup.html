@@ -1,17 +1,103 @@
 <!DOCTYPE html>
   <html>
+  <head>
+		<title> Sign Up </title>
+  <style>
+  p,h1
+  { 
+      font-family: verdana;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+        letter-spaceing: 10px;
+	
+}
+h1
+{
+      font-size: 40px;
+      letter-spaceing: 10px;
+}
+body
+{
+       background-color: lightPink;
+    	background-image: linear-gradient(to right, lightPink ,white);
+        font-family: verdana;
+	text-align: center;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+input[type=text]:hover
+{
+    color: silver;
+    border: 2px solid silver;
+}
+input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+input[type=password]:hover
+{
+    color: silver;
+    border: 2px solid silver;
+}
+.button
+{
+    background-color: silver;
+    border: 2px solid black;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1:hover
+{
+    background-color: black;
+    color: MistyRose;
+    border: 2px solid silver;
+}
+
+     </style>
+  </head>
   <body>
+  <div class="formsignup">
+  <h1> SIGN UP </h1>
 
   <form method="POST">
-  Door No: <input type="text" name="door"><br>
-  Block No: <input type="text" name="block"><br>
-  Resident's Name: <input type="text" name="name"><br>
-  Phone: <input type="text" name="phone"><br>
-  Type of Residency: <input type="text" name="rtype"><br>
-  Email: <input type="text" name="email"><br>
-  Password: <input type="password" name="passw"><br>
- <input type="submit" value="Submit">
+  <p>Door No</p>
+  <input type="text" name="door" placeholder="Door Number"><br>
+  <p>Block No</p> 
+  <input type="text" name="block" placeholder="Block Number"><br>
+  <p>Resident's Name</p>
+  <input type="text" name="name" placeholder="Name"><br>
+  <p>Phone</p>
+  <input type="text" name="phone" placeholder="Contact"><br>
+  <p>Type of Residency</p>
+  <input type="text" name="rtype" placeholder="Owner/Rent"><br>
+  <p>Email</p> 
+  <input type="text" name="email" placeholder="Email ID"><br>
+  <p>Password</p> 
+  <input type="password" name="passw" placeholder="Password"><br><br>
+  <input type="password" name="passw2" placeholder="Re-enter password"><br><br>
+  <br><button class="button button1">Submit</button>
  </form>
-
+</div>
 </body>
 </html>
