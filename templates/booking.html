@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-  <html>
+<html>
+<style>
+body
+{
+    background-color: lightPink;
+    	background-image: linear-gradient(to right, lightPink ,black);
+    font-family: verdana;
+    text-align: center;
+    color: ivory;
+     font-weight: bold;
+     font-size: 20px;
+}
+h
+{
+    font-size: 40px;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+input[type=text]:hover
+{
+    color: ivory;
+    border: 2px solid ivory;
+}
+.button
+{
+    background-color: MistyRose;
+    border: 2px solid black;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1:hover
+{
+    background-color: black;
+    color: MistyRose;
+    border: 2px solid ivory;
+}
+
+</style>
+<head>
+<link rel='stylesheet' href="{{ url_for('static', filename='css/all.css') }}">	
+   <title> Events </title>
+</head>
   <body>
-
+<br><h> RESERVE YOUR SEATS </h><br><br>
   <form method="POST">
-  Event ID: <input type="text" name="eid"><br>
-  Door No: <input type="text" name="door"><br>
-  No Of People : <input type="text" name="people"><br>
- <input type="submit" value="Book">
+  <p>Event ID</p>
+  <input type="text" placeholder="Event ID" name="eid"><br>
+  <p>Door No</p>
+  <input type="text" placeholder="Door Number" name="door"><br>
+  <p>No Of People</p>
+  <input type="text" placeholder="No. Of People" name="people"><br>
+  <br><button class="button button1">Submit</button>
  </form>
-
+<a class="button button1" style='font-size:24px' href="{{ url_for('services') }}"><i class='fa fa-arrow-left' aria-hidden="true"></i></button> </a> 
 </body>
 </html>
