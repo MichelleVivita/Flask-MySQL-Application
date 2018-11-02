@@ -1,14 +1,74 @@
 <!DOCTYPE html>
   <html>
+<style>
+body
+{
+    background-color: lightPink;
+    	background-image: linear-gradient(to right, lightPink ,black);
+    font-family: verdana;
+    text-align: center;
+    color: ivory;
+     font-weight: bold;
+     font-size: 20px;
+}
+h
+{
+    font-size: 40px;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+input[type=text]:hover
+{
+    color: ivory;
+    border: 2px solid ivory;
+}
+.button
+{
+    background-color: MistyRose;
+    border: 2px solid black;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1:hover
+{
+    background-color: black;
+    color: MistyRose;
+    border: 2px solid ivory;
+}
+
+</style>
+<head>
+   <title>Services</title>
+<link rel='stylesheet' href="{{ url_for('static', filename='css/all.css') }}">	
+</head>
   <body>
-
+  <h>AVAIL SERVICE</h><br><br>
   <form method="POST">
-  Staff ID: <input type="text" name="sid"><br>
-  Door No: <input type="text" name="door"><br>
-  Confirm In Time : <input type="text" name="intime"><br>
- Confirm Out Time : <input type="text" name="outtime"><br>
- <input type="submit" value="Submit">
+  <p>Staff ID</p> 
+  <input type="text" placeholder="Staff ID" name="sid"><br>
+  <p>Door No</p> 
+  <input type="text" placeholder="Door Number" name="door"><br>
+  <p>Confirm In Time</p>
+  <input type="text" placeholder="In Time" name="intime"><br>
+  <p>Confirm Out Time</p>
+  <input type="text" placeholder="Out Time" name="outtime"><br>
+  <br><button class="button button1">Submit</button>
  </form>
-
+<a class="button button1" style='font-size:24px' href="{{ url_for('services') }}"><i class='fa fa-arrow-left' aria-hidden="true"></i></button> </a> 
 </body>
 </html>
