@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html>
+<style>
+body
+{
+    text-align: center;
+    background-color: lightPink;
+    background-image: linear-gradient(to right, lightPink ,white);
+    font-family: Trocchi;
+    border-style: double;
+    border-width: 15px;
+    border-color: ivory;
+    border-radius: 10px;
+}
+a
+{
+    color: ivory;
+    text-align: center;
+}
+
+h
+{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    
+}
+.footer {
+    background-color: ivory;
+    text-align: right;
+    padding: 8px;
+    font-size: 10px;
+    color: black;
+}
+
+.button {
+-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    background-color: silver;
+	opacity: 0.69;
+    color: black;
+border: 2px solid black;
+    padding: 15px;
+	border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+font-weight: bold;
+margin: 4px 0px;
+}
+
+
+.button1:hover
+{
+    background-color: black;
+    color: MistyRose;
+    border: 2px solid silver;
+}
+
+</style>
 <head>
 <head>
+  <div class="imgg">
   <meta charset="UTF-8">
-        <link rel="stylesheet" href="D:\Users\Michelle\AppData\Local\Programs\Python\Python36\Flask App\static\style.css">
+        
+<link href="static\style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href="{{ url_for('static', filename='css/all.css') }}">
+</div>
 </head>
 
-    <title>Login</title>
+    <title>HODOR</title>
 <div class="container">
-	<li role="presentation"><a href="/signIn">Sign In</a></li>
+<br><h> WELCOME TO HODOR </h><br><br><br><br>
+<i class='fas fa-home' style='font-size:200px;color:black;'></i><br><br>
+	<br><br><ul role="presentation"><a class="button button1" href="/signIn">Sign In</a></ul><br><br>
 
- 	<li role="presentation"><a href="/signUp">Sign Up</a></li>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+ 	<ul role="presentation"><a class="button button1" href="/signup">Sign Up</a></ul>
+    <link rel="styleshe	et" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
 
 
 </div>
-
+<body><br><br><br>
+<p class="solid"></p>
+</body>
 </head>
 </html>
-
