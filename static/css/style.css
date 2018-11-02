@@ -1,0 +1,12 @@
+img {
+    width: 300px;
+    vertical-align:middle;
+ }
+.container {
+ 	border: 1px solid #000;
+ 	padding: 15% 15%;
+ 	width: 300px;
+ 	margin: 0 auto;
+
+ }
+
