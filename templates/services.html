@@ -1,27 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Services </title>
-
-<link rel="stylesheet" href="cal.css" type="text/css">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
-
-</head>
-
-
-<body>
-<div>
-<form method="POST">
-  Select the In Time: <input type="text" name="intime"><br>
-  Select the Out Time: <input type="text" name="outtime"><br>
-<button id="boo" type="submit">Avail</button>
-</form>
-</div>
-
-
-<div>
+	
 <style>
 #services {
     font-family: verdana;
@@ -30,13 +10,25 @@
 
 	
 }
-
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+input[type=text]:hover
+{
+    border: 2px solid silver;
+}
 #services td, #services th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#services tr:nth-child(even){background-color: ivory;}
+#services tr:nth-child(even){background-color: MistyRose;}
+#services tr:nth-child(odd){background-color: Silver ;}
 
 #services tr:hover {background-color: #ddd;}
 
@@ -44,12 +36,13 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: maroon;	
+    background-color: black;	
 	opacity: 0.69;
-    color: ivory;
+    color: white;
 }
 .button {
-    background-color: maroon;
+	
+    background-color: black;
 	opacity: 0.69;
     border: none;
     color: white;
@@ -59,10 +52,39 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 0px 4px;
+    margin: 4px 4px;
     cursor: pointer;
 }
+.button1 {
+	position:absolute;
+	bottom:0;
+}
 </style>
+<title> Services </title>
+
+<link rel="stylesheet" href="cal.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href="{{ url_for('static', filename='css/all.css') }}">	
+</head>
+
+
+<body>
+<div>
+<form method="POST">
+  <p>Select the In Time</p>
+  <input type="text" placeholder="In Time" name="intime"><br>
+  <p>Select the Out Time</p>
+  <input type="text" placeholder="Out Time" name="outtime"><br><br>
+  <button class="button boo" type="submit">Avail</button>
+<br><br><br>
+</form>
+</div>
+
+<div>
+
 
 <table id="services">
 <tr>
@@ -80,8 +102,8 @@
 	    </tr>
 {% endfor %}
 </table>
-<a href="{{ url_for('avail') }}">Book your service</a>
+<a class="button" href="{{ url_for('avail') }}">Book your service</a>
 </div>
-
+<a class="button button1" style='font-size:24px' href="{{ url_for('index') }}"><i class='fas fa-home'></i></button> </a> 
 </body>
 </html>
