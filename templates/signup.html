@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html>
   <head>
+<script language="JavaScript" type="text/javascript" src="D:\Users\Michelle\AppData\Local\Programs\Python\Python36\Flask App\static\js\jquery-3.3.1.js"></script>
 		<title> Sign Up </title>
   <style>
   p,h1
@@ -80,24 +81,37 @@ input[type=password]:hover
   <div class="formsignup">
   <h1> SIGN UP </h1>
 
-  <form method="POST">
+  <form method="POST" id="myForm" name="form1">
   <p>Door No</p>
-  <input type="text" name="door" placeholder="Door Number"><br>
+  <input type="text" name="door" placeholder="Door Number" required><br>
   <p>Block No</p> 
-  <input type="text" name="block" placeholder="Block Number"><br>
+  <input type="text" name="block" placeholder="Block Number" required><br>
   <p>Resident's Name</p>
-  <input type="text" name="name" placeholder="Name"><br>
+  <input type="text" name="name" placeholder="Name" required><br>
   <p>Phone</p>
-  <input type="text" name="phone" placeholder="Contact"><br>
+  <input type="text" name="phone" placeholder="Contact" required><br>
   <p>Type of Residency</p>
-  <input type="text" name="rtype" placeholder="Owner/Rent"><br>
+  <input type="text" name="rtype" placeholder="Owner/Rent" required><br>
   <p>Email</p> 
-  <input type="text" name="email" placeholder="Email ID"><br>
+  <input type="text" name="email" placeholder="Email ID" required><br>
   <p>Password</p> 
-  <input type="password" name="passw" placeholder="Password"><br><br>
-  <input type="password" name="passw2" placeholder="Re-enter password"><br><br>
-  <br><button class="button button1">Submit</button>
+  <input type="password" name="passw" placeholder="Password" required><br><br>
+  <input type="password" name="passw2" placeholder="Re-enter password" required><br><br>
+   <input type="submit" class="button button1" value="Submit" onClick="return checkform();">
+
  </form>
 </div>
 </body>
+<script>
+function checkform(){
+    var form1 = document.getElementById('myForm');
+    if(form1.passw.value != form1.passw2.value)
+    {
+        alert("Passwords must be the same");
+        form1.password.focus();
+        return false;
+    }
+    return true;
+}
+</script>
 </html>
