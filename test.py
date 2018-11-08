@@ -4,7 +4,7 @@ import MySQLdb
 
 app = Flask(__name__)
 
-db = MySQLdb.connect(host="localhost", user="Michelle", passwd="babyrose", db="hodor")
+db = MySQLdb.connect(host="localhost", user="Michelle", passwd="pass", db="hodor")
 cur = db.cursor()
 
 @app.route('/', methods=['GET'])
