@@ -10,6 +10,15 @@
 
 	
 }
+select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
 input[type=text] {
     width: 20%;
     padding: 12px 20px;
@@ -61,11 +70,6 @@ input[type=text]:hover
 }
 </style>
 <title> Services </title>
-
-<link rel="stylesheet" href="cal.css" type="text/css">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script> 
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel='stylesheet' href="{{ url_for('static', filename='css/all.css') }}">	
 </head>
@@ -79,7 +83,16 @@ input[type=text]:hover
   <p>Select the Out Time</p>
   <input type="text" placeholder="Out Time" name="outtime" required><br>
 <p>Select the Type of Service</p>
-<input type="text" placeholder="Service" name="service" required><br><br>
+<select placeholder="Service" name="service" required>
+  <option value="" selected disabled hidden>Services</option>
+  <option value="Cook">Cook</option>
+  <option value="Electrician">Electrician</option>
+  <option value="Gardener">Gardener</option>
+  <option value="Housemaid">Housemaid</option>
+<option value="Plumber">Plumber</option>
+<option value="Grocery Store">Grocery Store</option>
+</select> 
+<br><br>
   <button class="button boo" type="submit">Avail</button>
 <br><br><br>
 </form>
@@ -107,5 +120,6 @@ input[type=text]:hover
 <a class="button" href="{{ url_for('avail') }}">Book your service</a>
 </div>
 <a class="button button1" style='font-size:24px' href="{{ url_for('index') }}"><i class='fas fa-home'></i></button> </a> 
+
 </body>
 </html>
