@@ -102,14 +102,14 @@ def calendar():
     cur.execute(query)
     items = cur.fetchall()
     db.commit()
-    query="SELECT * from calendar"
+    query="SELECT * from calendar order by DATE"
     cur.execute(query)
     items = cur.fetchall()
     return render_template('calendar.html',items=items)
 
 @app.route('/oldevents')
 def oldevents():
-    query="SELECT * from OLD_CALENDAR"
+    query="SELECT * from OLD_CALENDAR  order by DATE"
     cur.execute(query)
     items = cur.fetchall()
     return render_template('past.html',items=items)
