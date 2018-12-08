@@ -11,12 +11,13 @@ On successfully logging in, the user is given an option to choose between
 
 The user has options to either view all resident details; view type of services offered by the community and avail any of their choice based on ‘in’ and ‘out’ times; view past or upcoming events and book their slot for the same. The user may then logout, which brings them back to the home page.
 
-SOFTWARE REQUIREMENTS :
+# SOFTWARE REQUIREMENTS :
+
   	Python 3.6 along with the following dependencies:
-a.	Pip :  A package management system used to install used to install and manage software packages written in Python.
-    i.	pip install mysqlclient
-    ii.	pip install flask
-b.	Flask: A micro web framework written in Python.
-c.	MySQLdb: A thread-compatible interface to the popular MySQL database server that provides the Python database API.
-d.	Database: A database named Hodor is created within MySQL database. Root privileges need to be given to all files within the database
+* Pip :  A package management system used to install used to install and manage software packages written in Python.
+    * pip install mysqlclient
+    * pip install flask
+* Flask: A micro web framework written in Python.
+* MySQLdb: A thread-compatible interface to the popular MySQL database server that provides the Python database API.
+* Database: A database named Hodor is created within MySQL database. Root privileges need to be given to all files within the database
 
