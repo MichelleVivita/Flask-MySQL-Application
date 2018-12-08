@@ -14,8 +14,8 @@ The user has options to either view all resident details; view type of services 
 SOFTWARE REQUIREMENTS :
   	Python 3.6 along with the following dependencies:
 a.	Pip :  A package management system used to install used to install and manage software packages written in Python.
-  i.	pip install mysqlclient
-  ii.	pip install flask
+    i.	pip install mysqlclient
+    ii.	pip install flask
 b.	Flask: A micro web framework written in Python.
 c.	MySQLdb: A thread-compatible interface to the popular MySQL database server that provides the Python database API.
 d.	Database: A database named Hodor is created within MySQL database. Root privileges need to be given to all files within the database
